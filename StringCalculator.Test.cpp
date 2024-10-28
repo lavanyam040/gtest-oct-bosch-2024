@@ -112,4 +112,7 @@ TEST(string_calculator_add,when_passed_multiple_multicharacter_delimiters){
 }
 
 
-
+TEST(string_calculator_add, when_passed_negative_numbers) {
+    StringCalculator objUnderTest;
+    ASSERT_THROW(objUnderTest.Add("1,-2,-4,5"), std::invalid_argument);
+}
