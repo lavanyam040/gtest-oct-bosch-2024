@@ -31,3 +31,13 @@ int expectedValue=1;
 int actualValue =objUnderTest Add(input);
 ASSERT_EQ(expectedValue,actualValue);
 }
+
+TEST(string_calculator_add,when_passed_two_comma_delimited_numbers){
+
+  StringCalculator  objUnderTests;
+  string input = "1,2";
+  int expectedValue = 3;
+  int actualValue = objUnderTests.Add(input);
+
+  ASSERT_EQ(actualValue,expectedValue);
+}
