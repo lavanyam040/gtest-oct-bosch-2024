@@ -45,7 +45,7 @@ TEST(string_calculator_add,when_passed_two_comma_delimited_numbers){
 TEST(string_calculator_add,when_passed_multiple_comma_delimited_numbers){
 
   StringCalculator  objUnderTests;
-  string input = "1,2,3";;
+  string input = "1,2,3";
   int expectedValue = 6;
   int actualValue = objUnderTests.Add(input);
 
@@ -55,7 +55,7 @@ TEST(string_calculator_add,when_passed_multiple_comma_delimited_numbers){
 TEST(string_calculator_add,when_delimited_with_newline_and_comma){
 
   StringCalculator  objUnderTests;
-  string input = "1\n2,5";;
+  string input = "1\n2,5";
   int expectedValue = 8;
   int actualValue = objUnderTests.Add(input);
 
@@ -64,10 +64,19 @@ TEST(string_calculator_add,when_delimited_with_newline_and_comma){
 TEST(string_calculator_add,when_passed_a_delimiter){
 
   StringCalculator  objUnderTests;
-  string input = ""//;\n1;2";;
+  string input = ""//;\n1;2";
   int expectedValue = 3;
   int actualValue = objUnderTests.Add(input);
 
   ASSERT_EQ(actualValue,expectedValue);
 }
 
+TEST(string_calculator_add,when_passed_numbers_over_1000){
+
+  StringCalculator  objUnderTests;
+  string input = "42,1001,3";
+  int expectedValue = 45;
+  int actualValue = objUnderTests.Add(input);
+
+  ASSERT_EQ(actualValue,expectedValue);
+}
