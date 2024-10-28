@@ -80,3 +80,33 @@ TEST(string_calculator_add,when_passed_numbers_over_1000){
 
   ASSERT_EQ(actualValue,expectedValue);
 }
+
+TEST(string_calculator_add,when_passed_multicharacter_delimiter){
+  
+  StringCalculator  objUnderTests;
+  string input = "//[***]\n8***2***3";
+  int expectedValue = 13;
+  int actualValue = objUnderTests.Add(input);
+  ASSERT_EQ(actualValue,expectedValue);
+}
+
+TEST(string_calculator_add,when_passed_multiple_delimiters){
+
+  StringCalculator  objUnderTests;
+  string input = "//[*][%]\n4*2%3";
+  int expectedValue = 9;
+ 
+  int actualValue = objUnderTests.Add(input);
+  ASSERT_EQ(actualValue,expectedValue);
+}
+
+TEST(string_calculator_add,when_passed_multiple_multicharacter_delimiters){
+  
+  StringCalculator  objUnderTests;
+  string input ="//[**][%^]\n4**1%^9";
+  int expectedValue = 14;
+ 
+  int actualValue = objUnderTests.Add(input);
+ 
+  ASSERT_EQ(actualValue,expectedValue);
+}
