@@ -41,3 +41,13 @@ TEST(string_calculator_add,when_passed_two_comma_delimited_numbers){
 
   ASSERT_EQ(actualValue,expectedValue);
 }
+
+TEST(string_calculator_add,when_passed_multiple_comma_delimited_numbers){
+
+  StringCalculator  objUnderTests;
+  string input = "1\n2,5";;
+  int expectedValue = 8;
+  int actualValue = objUnderTests.Add(input);
+
+  ASSERT_EQ(actualValue,expectedValue);
+}
