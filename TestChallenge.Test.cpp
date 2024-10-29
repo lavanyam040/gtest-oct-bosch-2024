@@ -3,12 +3,9 @@
 
 Class AdditionTest:public testting ::Test{
   protected :
-  int result = 0;
-  void SetUp() override {
-  objUnderTest = new AdditionTest();
-}
-  void TearDown() {
-  delete  result;
+   int result;
+    void SetUp() override {
+        result = 0;
   }
 };
 TEST(AdditionTest, AddsTwoPositiveNumbers) {
