@@ -18,8 +18,8 @@ enable_testing()
 add_compile_options("--coverage")
 add_executable(
   unittestcode
-  StringCalculator.cpp
-  StringCalculatorDataDriven.Test.cpp
+  TestChallenge.cpp
+
  
  )
 target_link_libraries(
