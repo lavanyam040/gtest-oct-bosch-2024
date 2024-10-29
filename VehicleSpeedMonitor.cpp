@@ -19,4 +19,4 @@ void SpeedMonitor::monitor(IMessageCommunicator* communicator,ISpeedSensor* sens
                  
             }
               
-          }
+}
