@@ -18,8 +18,7 @@ enable_testing()
 add_compile_options("--coverage")
 add_executable(
   unittestcode
-  TestChallenge.cpp
-  TestChallenge.Test.cpp
+  VehicleSpeedMonitor.cpp
  
  )
 target_link_libraries(
