@@ -12,7 +12,7 @@ class StringCalculatorDataDrivenAddFixture:public testing::Test{
   void SetUp() override {
       objUnderTest=new StringCalculator();
     dataSet.push_back(make_tuple("",0));
-    dataSet.push_back(make_tuple("0",10));
+    dataSet.push_back(make_tuple("0",0));
     dataSet.push_back(make_tuple("1",1));
     dataSet.push_back(make_tuple("1,2",3));
   }
